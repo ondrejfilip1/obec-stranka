@@ -1,5 +1,4 @@
-import * as React from "react";
-import { useState } from "react";
+import React, { useEffect } from "react";
 import "./../../App.css";
 import { createTheme } from "@mui/material/styles";
 import "@fontsource/inter";
@@ -55,6 +54,9 @@ const rows = [
 ];
 
 export default function Home() {
+  useEffect(() => {
+    document.title = 'Plzeňský kraj - Informace';
+  }, []);
   return (
     <>
       <div className="header-placeholder"></div>

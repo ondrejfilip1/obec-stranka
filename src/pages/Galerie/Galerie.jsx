@@ -1,5 +1,5 @@
 import Header from "@/components/Header/Header";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Galerie.css";
 import { Button } from "@mui/material";
@@ -26,6 +26,9 @@ import {
 } from "@/components/ui/pagination";
 
 export default function Galerie() {
+  useEffect(() => {
+    document.title = 'Plzeňský kraj - Galerie';
+  }, []);
   return (
     <>
       <Header scrollEffect="off"></Header>

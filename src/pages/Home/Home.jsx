@@ -33,6 +33,10 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import InfoIcon from "@mui/icons-material/Info";
 
 export default function Home() {
+  useEffect(() => {
+    document.title = 'Plzeňský kraj';
+  }, []);
+
   const [api, setApi] = useState(null);
   const [current, setCurrent] = useState(0);
   const [mapSrc, setMapSrc] = useState("https://frame.mapy.cz/s/gagefusono");
