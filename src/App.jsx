@@ -9,6 +9,8 @@ import Informace from "./pages/Informace/Informace";
 import Galerie from "./pages/Galerie/Galerie";
 import Kontakty from "./pages/Kontakty/Kontakty";
 import Aktuality from "./pages/Aktuality/Aktuality";
+import Kultura from "./pages/Kultura/Kultura";
+import Mapa from "./pages/Mapa/Mapa"
 
 export default function App() {
   return (
@@ -22,7 +24,9 @@ export default function App() {
               <Route path="/informace" element={<Informace />} />
               <Route path="/galerie" element={<Galerie />} />
               <Route path="/kontakty" element={<Kontakty />} />
+              <Route path="/kultura" element={<Kultura />} />
               <Route path="/aktuality" element={<Aktuality />} />
+              <Route path="/mapa" element={<Mapa />} />
             </Routes>
           </div>
         </>
@@ -50,5 +54,11 @@ export const theme = createTheme({
     green: createColor("#0B6E4F"),
     transparent: createColor("#FFFFFF00"),
     yellowN: createColor("rgb(235, 197, 43)"),
+  },
+});
+
+export const themeInter = createTheme({
+  typography: {
+    fontFamily: ['Inter', 'serif'].join(','),
   },
 });

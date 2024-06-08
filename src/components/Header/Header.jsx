@@ -101,17 +101,22 @@ export default function Header({ scrollEffect }) {
                   open={Boolean(anchorEl) && menuIndex === 1}
                   onClose={handleMenuClose}
                 >
+                  <Link to={"/novinky"}>
                   <MenuItem onClick={handleMenuClose}>Novinky</MenuItem>
+                  </Link>
+                  <Link to={"/akce"}>
                   <MenuItem onClick={handleMenuClose}>Akce</MenuItem>
+                  </Link>
                   <Link to={"/galerie"}>
                     {" "}
                     <MenuItem onClick={handleMenuClose}>Galerie</MenuItem>
                   </Link>
                 </Menu>
+                <Link to={"/kultura"}>
                 <Button color="inherit" className="header-button">
-                  <Link></Link>
                   Kultura
                 </Button>
+                </Link>
                 <Link to={"/kontakty"}>
                   <Button color="inherit" className="header-button">
                     Kontakty
@@ -177,12 +182,16 @@ export default function Header({ scrollEffect }) {
                   }`}
                 >
                   <div>
+                  <Link to={"/novinky"}>
                     <Button color="transparent" variant="contained">
                       Novinky
                     </Button>
+                    </Link>
+                    <Link to={"/akce"}>
                     <Button color="transparent" variant="contained">
                       Akce
                     </Button>
+                    </Link>
                     <Link to={"/galerie"}>
                       <Button color="transparent" variant="contained">
                         Galerie
@@ -190,9 +199,11 @@ export default function Header({ scrollEffect }) {
                     </Link>
                   </div>
                 </div>
+                <Link to={"/kultura"}>
                 <Button color="transparent" variant="contained">
                   Kultura
                 </Button>
+                </Link>
                 <Link to={"/kontakty"}>
                   <Button color="transparent" variant="contained">
                     Kontakty
