@@ -19,7 +19,7 @@ import {
 import Pamatka1 from "../../../src/assets/main-page/pilirmostu.jpg";
 import Obrazek from "../../../src/assets/main-page/Kasperk2.jpg";
 import PlzenskyHrad from "../../../src/assets/main-page/plzenskyhrad.jpg";
-import PlzenskyKraj from "../../assets/Plzensky_kraj.svg"
+import PlzenskyKraj from "../../assets/Plzensky_kraj.svg";
 import { Button, Rating } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
@@ -29,8 +29,8 @@ import { theme } from "@/App";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Svg from "../../components/Svg/Svg";
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import InfoIcon from '@mui/icons-material/Info';
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import InfoIcon from "@mui/icons-material/Info";
 
 export default function Home() {
   const [api, setApi] = useState(null);
@@ -96,7 +96,7 @@ export default function Home() {
         </div>
       </div>
       <Container fixed className="open-sans">
-      <div className="flex gap-10 flex-900px-column my-28">
+        <div className="flex gap-10 flex-900px-column my-28">
           <div className="flex-1">
             <h3 className="text-gray-500 text-lg inter-font">
               Vítejte v Plzeňském kraji
@@ -111,16 +111,17 @@ export default function Home() {
               za námi a objevte krásy a bohatství Plzeňského kraje.
             </h3>
             <ThemeProvider theme={theme}>
-              <div className="my-5"><Link to={"/informace"}>
-                <Button variant="contained" color="green">
-                  Více informací
-                  <InfoIcon className="ml-1.5" />
-                  
-                </Button></Link>
+              <div className="my-5">
+                <Link to={"/informace"}>
+                  <Button variant="contained" color="green">
+                    Více informací
+                    <InfoIcon className="ml-1.5" />
+                  </Button>
+                </Link>
               </div>
             </ThemeProvider>
           </div>
-          
+
           <div className="flex-1 relative h-fit">
             <span className="absolute text-white/85 inter-font z-10 p-2 px-3 text-xs bottom-0 text-shadow-md">
               Státní hrad a zámek Velhartice
@@ -131,29 +132,31 @@ export default function Home() {
           </div>
         </div>
         <div className="flex gap-10 flex-900px-column my-28">
-        <div className="flex-1 relative hover-svg-transition self-center order-1 custom-responsivity-order-first">
+          <div className="flex-1 relative hover-svg-transition self-center order-1 custom-responsivity-order-first">
             <div>
-            <Svg className="w-full h-full"></Svg>
+              <Svg className="w-full h-full"></Svg>
             </div>
           </div>
           <div className="flex-1">
             <h2 className="text-4xl dark:text-white my-5">
-            Najděte svou cestu s naší detailní mapou kraje
+              Najděte svou cestu s naší detailní mapou kraje
             </h2>
             <h3 className="text-gray-500 text-lg inter-font">
-            Od malebných vesniček po významné historické památky - naše interaktivní mapa vám pomůže objevit všechny skvosty Plzeňského kraje.
+              Od malebných vesniček po významné historické památky - naše
+              interaktivní mapa vám pomůže objevit všechny skvosty Plzeňského
+              kraje.
             </h3>
             <ThemeProvider theme={theme}>
-              <div className="my-5"><Link to={"/mapa"}>
-                <Button variant="contained" color="green">
-                  Zobrazit mapu
-                  <LocationOnIcon className="ml-1.5" />
-                </Button></Link>
+              <div className="my-5">
+                <Link to={"/mapa"}>
+                  <Button variant="contained" color="green">
+                    Zobrazit mapu
+                    <LocationOnIcon className="ml-1.5" />
+                  </Button>
+                </Link>
               </div>
             </ThemeProvider>
           </div>
-          
-
         </div>
         <h2 className="text-4xl dark:text-white mb-10 mt-20 text-center">
           Aktuality
@@ -413,20 +416,21 @@ export default function Home() {
                       <div className="rating-number">4.6</div>
                     </div>
                     <ThemeProvider theme={theme}>
-                      <Button
-                        variant="contained"
-                        className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
-                        color="transparent"
+                      {" "}
+                      <Link
+                        to={
+                          "https://mapy.cz/zakladni?source=base&id=2260430&x=13.1965349&y=49.6419734&z=17"
+                        }
                       >
-                        <Link
-                          to={
-                            "https://mapy.cz/zakladni?source=base&id=2260430&x=13.1965349&y=49.6419734&z=17"
-                          }
+                        <Button
+                          variant="contained"
+                          className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
+                          color="transparent"
                         >
                           Navštívit
                           <ArrowOutwardIcon className="pl-1"></ArrowOutwardIcon>
-                        </Link>
-                      </Button>
+                        </Button>
+                      </Link>
                     </ThemeProvider>
                   </CardContent>
                 </Card>
@@ -458,20 +462,21 @@ export default function Home() {
                       <div className="rating-number">4.7</div>
                     </div>
                     <ThemeProvider theme={theme}>
-                      <Button
-                        variant="contained"
-                        className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
-                        color="transparent"
+                      {" "}
+                      <Link
+                        to={
+                          "https://cs.wikipedia.org/wiki/Katedr%C3%A1la_svat%C3%A9ho_Bartolom%C4%9Bje"
+                        }
                       >
-                        <Link
-                          to={
-                            "https://cs.wikipedia.org/wiki/Katedr%C3%A1la_svat%C3%A9ho_Bartolom%C4%9Bje"
-                          }
+                        <Button
+                          variant="contained"
+                          className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
+                          color="transparent"
                         >
                           Navštívit
                           <ArrowOutwardIcon className="pl-1"></ArrowOutwardIcon>
-                        </Link>
-                      </Button>
+                        </Button>
+                      </Link>
                     </ThemeProvider>
                   </CardContent>
                 </Card>
@@ -501,16 +506,17 @@ export default function Home() {
                       <div className="rating-number">4.7</div>
                     </div>
                     <ThemeProvider theme={theme}>
-                      <Button
-                        variant="contained"
-                        className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
-                        color="transparent"
-                      >
-                        <Link to={"https://zamek-manetin.cz/cs"}>
+                      {" "}
+                      <Link to={"https://zamek-manetin.cz/cs"}>
+                        <Button
+                          variant="contained"
+                          className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
+                          color="transparent"
+                        >
                           Navštívit
                           <ArrowOutwardIcon className="pl-1"></ArrowOutwardIcon>
-                        </Link>
-                      </Button>
+                        </Button>
+                      </Link>
                     </ThemeProvider>
                   </CardContent>
                 </Card>
@@ -540,20 +546,21 @@ export default function Home() {
                       <div className="rating-number">4.6</div>
                     </div>
                     <ThemeProvider theme={theme}>
-                      <Button
-                        variant="contained"
-                        className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
-                        color="transparent"
+                      {" "}
+                      <Link
+                        to={
+                          "https://www.kudyznudy.cz/aktivity/nove-divadlo-josefa-kajetana-tyla-v-plzni"
+                        }
                       >
-                        <Link
-                          to={
-                            "https://www.kudyznudy.cz/aktivity/nove-divadlo-josefa-kajetana-tyla-v-plzni"
-                          }
+                        <Button
+                          variant="contained"
+                          className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
+                          color="transparent"
                         >
                           Navštívit
                           <ArrowOutwardIcon className="pl-1"></ArrowOutwardIcon>
-                        </Link>
-                      </Button>
+                        </Button>
+                      </Link>
                     </ThemeProvider>
                   </CardContent>
                 </Card>
@@ -584,20 +591,20 @@ export default function Home() {
                       <div className="rating-number">4,2</div>
                     </div>
                     <ThemeProvider theme={theme}>
-                      <Button
-                        variant="contained"
-                        className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
-                        color="transparent"
+                      <Link
+                        to={
+                          "https://www.kudyznudy.cz/aktivity/zamek-zbiroh-vychutnejte-si-zamecke-prostredi-pr"
+                        }
                       >
-                        <Link
-                          to={
-                            "https://www.kudyznudy.cz/aktivity/zamek-zbiroh-vychutnejte-si-zamecke-prostredi-pr"
-                          }
+                        <Button
+                          variant="contained"
+                          className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
+                          color="transparent"
                         >
                           Navštívit
                           <ArrowOutwardIcon className="pl-1"></ArrowOutwardIcon>
-                        </Link>
-                      </Button>
+                        </Button>
+                      </Link>
                     </ThemeProvider>
                   </CardContent>
                 </Card>

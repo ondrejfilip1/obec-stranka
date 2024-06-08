@@ -61,7 +61,7 @@ export default function Kultura() {
               icon={item.icon}
               image={item.image}
               link={item.link}
-              className={` ${i === 3 || i === 6 ? "md:col-span-2" : ""}`}
+              className={`md:col-span-${i === 3 ? '3' : i === 6 ? '2' : 'auto'}`}
             />
           ))}
         </BentoGrid>
