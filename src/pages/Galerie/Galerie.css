@@ -1,0 +1,75 @@
+.Gallery-Image {
+  position: relative;
+  background-image: linear-gradient(#0b6e4fbf 0 0);
+  background-size: 200% 100%;
+  background-position: 200% 200%;
+  background-repeat: no-repeat;
+  transition: background-size .5s, background-position .5s;
+}
+
+.Gallery-Image:hover {
+  background-size: 200% 100%;
+  background-position: 100% 100%;
+}
+
+.Gallery-Button span {
+  opacity: 1;
+  transition: opacity .5s, top .5s;
+  top: 0;
+  position: relative;
+  font-family: "Inter";
+}
+
+.Gallery-Button:hover span {
+  top: 20px;
+  opacity: 0;
+}
+
+.Gallery-Button {
+  font-family: "Inter";
+  display: block!important; /* Ensure it's visible */
+  cursor: pointer;
+  background-color: #ffffff00;
+  color: #fff !important;
+  border: 3px solid #fff !important;
+  letter-spacing: 0.2em !important;
+  overflow: hidden;
+  transition: opacity .5s!important; /* Ensure transition is set for opacity */
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Gallery-Button::before {
+  content: "navštívit";
+  position: absolute;
+  font-family: "Inter";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s;
+  background: #fff;
+  transform: translate3d(-100%, 0, 0);
+  box-sizing: border-box;
+  padding: 8px 9px;
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.Gallery-Button:hover::before {
+  transform: translate3d(0, 0, 0);
+  color: #0b6e4f;
+}
+
+.Gallery-Image:hover .Gallery-Button {
+  opacity: 1;
+}
+
+.Gallery-Image img {
+  position: relative;
+  z-index: -1;
+  object-fit: cover;
+  height: 100%;
+}

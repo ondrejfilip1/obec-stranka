@@ -1,0 +1,416 @@
+.after-photo-main {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter";
+    font-weight: 900;
+    font-size: 6.5vw;
+    letter-spacing: .5em;
+    text-indent: .5em;
+    mix-blend-mode: multiply;
+    color: white;
+}
+
+.after-photo-main span {
+    animation: 1.5s fadeInText, 1s translateY-anim;
+}
+
+@keyframes fadeInText {
+    from {
+        letter-spacing: 0em;
+        color: transparent;
+    }
+
+    to {
+        letter-spacing: .5em;
+        color: white;
+    }
+}
+
+@keyframes fadeInText2 {
+    from {
+        letter-spacing: 0em;
+        color: transparent;
+    }
+
+    to {
+        letter-spacing: .5em;
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+@keyframes translateY-anim {
+    from {
+        transform: translateY(50px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes background-pos-anim {
+    from {
+        background-position-y: 25vh;
+    }
+
+    to {
+        background-position-y: 0;
+    }
+}
+
+.after-photo-main-2 {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter";
+    font-weight: 900;
+    font-size: 6.5vw;
+    letter-spacing: .5em;
+    text-indent: .5em;
+    color: rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(transparent, transparent 75%, rgba(255, 255, 255, .3));
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    animation: 1.5s fadeInText2, 1s translateY-anim, 1s background-pos-anim 1s backwards;
+}
+
+.hover-anim-image {
+    overflow: hidden;
+}
+
+.hover-anim-image img {
+    transition: .5s all;
+}
+
+.hover-anim-image:hover img {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 900px) {
+    .flex-900px-column {
+        flex-direction: column;
+    }
+}
+
+.background-image-carousel {
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: repeat !important;
+    min-height: 80vh;
+}
+
+.background1 {
+    background-image: url("/src/assets/main-page/kozel.webp");
+}
+
+.background2 {
+    background-image: url("/src/assets/main-page/katedrala_sv_barta.jpg");
+}
+
+.background3 {
+    background-image: url("/src/assets/main-page/zamek_manetin.jpg");
+}
+
+.background4 {
+    background-image: url("/src/assets/main-page/divadlo_jkt.webp");
+}
+
+.background5 {
+    background-image: url("/src/assets/main-page/zamer_zbiroh.webp");
+}
+
+.background-image-carousel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.5s;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.background-image-carousel:hover::before {
+    background-color: #0000008a;
+}
+
+.background-zpravy-1,
+.background-zpravy-2,
+.background-zpravy-3,
+.background-zpravy-4,
+.background-zpravy-5 {
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background-zpravy-1 {
+    background-image: url("/src/assets/main-page/preshranicni_spoluprace.jpg");
+}
+
+.background-zpravy-2 {
+    background-image: url("/src/assets/main-page/vznik_bezpecnostne.jpg");
+}
+
+.background-zpravy-3 {
+    background-image: url("/src/assets/main-page/den_verejneho_zdravi.png");
+}
+
+.background-zpravy-4 {
+    background-image: url("/src/assets/main-page/cyklostezka_chrast.jpg");
+}
+
+.background-zpravy-5 {
+    background-image: url("/src/assets/main-page/evropsky_parlament.webp");
+}
+
+.background-zpravy-1:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/main-page/preshranicni_spoluprace.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background-zpravy-2:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/main-page/vznik_bezpecnostne.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background-zpravy-3:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/main-page/den_verejneho_zdravi.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background-zpravy-4:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/main-page/cyklostezka_chrast.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background-zpravy-5:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/main-page/evropsky_parlament.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.shadow-custom {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.popisek-zpravy {
+    font-family: "Inter";
+    transform: translateY(-35px);
+    transition: .2s transform;
+    width: 94%;
+    height: 100%;
+}
+
+.background-zpravy-1:hover + .popisek-zpravy,
+.background-zpravy-2:hover + .popisek-zpravy,
+.background-zpravy-3:hover + .popisek-zpravy,
+.background-zpravy-4:hover + .popisek-zpravy,
+.background-zpravy-5:hover + .popisek-zpravy {
+    transform: translateY(0);
+}
+
+
+/* Carousel */
+
+div[aria-roledescription="carousel"].pamatky-carousel div[role="group"] {
+    padding-left: 0 !important;
+}
+
+div[aria-roledescription="carousel"].pamatky-carousel .textik {
+    position: relative;
+    z-index: 2;
+    color: white;
+    margin: 1rem;
+    margin-left: 2rem;
+    text-shadow: 1px 1px 6px #0000006c;
+    transition: .5s text-shadow;
+}
+
+
+div[aria-roledescription="carousel"].pamatky-carousel:hover .textik,
+div[aria-roledescription="carousel"].pamatky-carousel:hover .rating {
+    text-shadow: 1px 1px 6px transparent;
+}
+
+
+div[aria-roledescription="carousel"].pamatky-carousel .rating {
+    position: relative;
+    z-index: 2;
+    margin: 1rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div[aria-roledescription="carousel"].pamatky-carousel .rating svg {
+    color: white;
+}
+
+div[aria-roledescription="carousel"].pamatky-carousel .rating .rating-number {
+    color: white;
+    font-size: 1.5em;
+    margin-left: 2rem;
+}
+
+div[aria-roledescription="carousel"].pamatky-carousel button.textik svg {
+    position: relative;
+    top: -1px;
+    right: -2px;
+}
+
+.responsivity-carousel-1 {
+    background-image: linear-gradient(90deg, transparent 33.33%, #d0e7b4 33.33%);
+}
+
+@media screen and (max-width: 768px) {
+    .responsivity-carousel-1 {
+        flex-direction: column;
+    }
+
+    .responsivity-carousel-1 .width-fixed-1 {
+        width: 100% !important;
+    }
+}
+
+div[aria-roledescription="carousel"].pamatky-carousel .fix-tlacitka {
+    top: unset;
+    transform: translateY(0);
+}
+
+.iframe-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+iframe {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+html,
+body,
+iframe {
+    height: 100% !important;
+}
+
+.Zpravy-Button span {
+    opacity: 1;
+    transition: opacity .5s, top .5s;
+    top: 0;
+    position: relative;
+    font-family: "Inter";
+}
+
+.Zpravy-Button:hover span {
+    top: 20px;
+    opacity: 0;
+}
+
+.Zpravy-Button {
+    font-family: "Inter";
+    display: block !important;
+    /* Ensure it's visible */
+    cursor: pointer;
+    background-color: #ffffff00;
+    color: #fff !important;
+    border: 3px solid #fff !important;
+    letter-spacing: 0.2em !important;
+    overflow: hidden;
+    transition: opacity .5s !important;
+    /* Ensure transition is set for opacity */
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Zpravy-Button::before {
+    content: "přečíst";
+    position: absolute;
+    font-family: "Inter";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s;
+    background: #fff;
+    transform: translate3d(-100%, 0, 0);
+    box-sizing: border-box;
+    padding: 8px 9px;
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.Zpravy-Button:hover::before {
+    transform: translate3d(0, 0, 0);
+    color: black;
+}
+
+.background-zpravy-1:hover .Zpravy-Button,
+.background-zpravy-2:hover .Zpravy-Button,
+.background-zpravy-3:hover .Zpravy-Button,
+.background-zpravy-4:hover .Zpravy-Button,
+.background-zpravy-5:hover .Zpravy-Button {
+    opacity: 1;
+}
+
+.top-minus {
+    top: -4rem!important;
+}
+
+.animace-co-chtel-tomas {
+    box-sizing: content-box;
+    bottom: 2rem;
+    white-space: no-wrap;
+}
+
+.animace-co-chtel-tomas path {
+    animation: 2s infinite pulsing-anim;
+    
+}
+
+@keyframes pulsing-anim {
+    from {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(8px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.text-shadow-md {
+    text-shadow: black 0px 0px 5px;
+}

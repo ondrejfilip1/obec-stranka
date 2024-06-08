@@ -1,0 +1,20 @@
+.article-link-button {
+    border-radius: 0;
+    border: 1px solid black;
+}
+
+.testik {
+    height: 100vh;
+    background-size: cover; /* Adjust the size of the background image */
+    background-position: center;
+    background-image: url("../../assets/slideshow/img1.jpg");
+}
+
+.hover-anim .hover-anim-target {
+    opacity: 0!important;
+    transition: .3s opacity;
+}
+
+.hover-anim:hover .hover-anim-target {
+    opacity: 1!important;
+}

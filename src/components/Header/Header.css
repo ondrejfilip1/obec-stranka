@@ -1,0 +1,170 @@
+header {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    overflow: hidden;
+}
+
+header img {
+    user-select: none;
+    height: 44.234px;
+}
+
+header fieldset {
+    border-color: rgba(255, 255, 255, 0.23) !important;
+}
+
+header label {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+header input {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+header .header-css fieldset {
+    border-color: rgba(0, 0, 0, 0.23) !important;
+}
+
+header .header-css label {
+    color: rgba(0, 0, 0, 0.6) !important;
+}
+
+header .header-css input {
+    color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.menu-sm {
+    display: none;
+    margin-right: 8px;
+}
+
+.menu-sm button {
+    padding: 8px;
+    min-width: unset;
+    min-height: unset;
+}
+
+@media screen and (max-width: 844px) {
+    .menu-sm {
+        display: block;
+    }
+
+    .header-button {
+        display: none !important;
+    }
+
+    .header-css {
+        padding-right: 0 !important;
+    }
+}
+
+@media screen and (min-width: 844px) {
+    .container-menu-sm {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .gap-header-buttons {
+        gap: 0!important;
+    }
+}
+
+
+/*
+@media screen and (max-width: 538px) {
+    header img {
+        content: url("../../assets/favicon.png")
+    }
+}
+*/
+
+.header-css .header-css-selector {
+    background-color: #ffffff82;
+    backdrop-filter: blur(20px);
+    color: #33333c !important;
+    border-bottom: 2px solid #0000001a;
+    transition: .3s background-color, .3s border-color, .3s backdrop-filter;
+}
+
+.container-menu-sm button {
+    border-bottom: 2px solid #0000001a;
+    box-shadow: none !important;
+}
+
+.container-menu-sm {
+    background: transparent;
+    transition: .5s transform;
+    z-index: -1;
+    transform: translateY(-100%);
+    backdrop-filter: blur(20px);
+}
+
+.container-menu-sm button {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.container-menu-sm.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.wrapper-menu-sm.hide {
+    pointer-events: none;
+}
+
+.wrapper-menu-sm {
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+    top: 76px;
+}
+
+.wrapper-menu-sm button {
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+}
+
+.container-dropdown-sm {
+    display: block;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+}
+
+.container-dropdown-sm button {
+    border-top: none!important;
+}
+
+.container-dropdown-sm > div {
+    overflow: hidden;
+  }
+
+div.show-dropdown {
+    grid-template-rows: 1fr;
+}
+
+.wrapper-menu-sm button svg {
+    transition: .2s rotate;
+}
+
+button.show-dropdown svg {
+    rotate: 180deg;
+}
+
+.header-css .container-menu-sm {
+    background: #ffffff82 !important;
+}
+
+.header-css .container-menu-sm button {
+    color: rgba(0, 0, 0, 0.87);
+}

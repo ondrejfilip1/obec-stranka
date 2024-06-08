@@ -1,0 +1,107 @@
+:root {
+    --primary-text-color: rgba(35, 54, 108, 1);
+    --footer-color: rgba(35, 54, 108, 0.1);
+    --button-color: rgba(11, 110, 79, 1);
+    --secondary-button-color: rgb(235, 197, 43);
+    --tertiary-button-color: rgba(255, 255, 255, 1);
+    --tertiary-button-text-color: rgba(255, 255, 255, 1);
+}
+
+footer {
+    color: rgba(35, 54, 108, 1);
+    /*background-image: url(../../assets/test.png);
+    background-size: 100px;
+    background-position: calc(100% - 15px) 15px;
+    background-repeat: no-repeat;*/
+}
+
+.Footer-button {
+    font-weight: 600 !important;
+}
+
+.Footer-button:hover {
+    background-color: #c9a823 !important;
+}
+
+@media screen and (max-width: 1455px) {
+    .Footer-button {
+        display: block !important;
+        width: 223px;
+        border-top-right-radius: 0 !important;
+        border-bottom-left-radius: 4px !important;
+    }
+
+    .Footer-Email{
+        width: 223px;
+    }
+    
+
+    footer input {
+        border-bottom-left-radius: 0 !important;
+        border-top-left-radius: 4px !important;
+        border-top-right-radius: 4px !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .Footer-button {
+        display: block !important;
+    }
+
+    .Footer-TextField {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .Footer-Icons {
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .Footer-Icons {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+footer a {
+    display: inline-block;
+    padding-bottom: 2px;
+    background-image: linear-gradient(rgba(35, 54, 108, 1) 0 0);
+    background-position: 0 100%;
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    transition:
+        background-size 0.3s,
+        background-position 0s 0.3s,
+        color .1s;
+}
+
+footer a:hover {
+    background-position: 100% 100%;
+    background-size: 100% 2px;
+    color: var( --primary-text-color);
+}
+
+.no-animation a {
+    background-image: none;
+}
+
+.copyright-footer {
+    border-top: 3px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, rgba(20, 111, 44, 1) 0%, rgba(20, 111, 44, 1) 33.33%, rgba(235, 198, 45, 1) 33.33%, rgba(235, 198, 45, 1) 66.66%, rgba(38, 57, 109, 1) 66.66%);
+}
+
+.Footer-Icons a:last-child {
+    margin-right: 0!important;
+    }
