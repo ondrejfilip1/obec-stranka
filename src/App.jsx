@@ -9,6 +9,7 @@ import Informace from "./pages/Informace/Informace";
 import Galerie from "./pages/Galerie/Galerie";
 import Kontakty from "./pages/Kontakty/Kontakty";
 import Aktuality from "./pages/Aktuality/Aktuality";
+import Mapa from "./pages/Mapa/Mapa"
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
               <Route path="/galerie" element={<Galerie />} />
               <Route path="/kontakty" element={<Kontakty />} />
               <Route path="/aktuality" element={<Aktuality />} />
+              <Route path="/mapa" element={<Mapa />} />
             </Routes>
           </div>
         </>

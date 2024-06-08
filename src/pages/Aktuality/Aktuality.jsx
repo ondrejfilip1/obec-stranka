@@ -116,7 +116,6 @@ const items = [
     description: "čtvrtek, 6. červen 2024 16:11",
     header: <Skeleton image={img1} />,
     icon: <IconCalendarEvent className="h-4 w-4 text-neutral-500" />,
-    image: "../../assets/aktuality/vystava-ocima-franze-kafky_L.jpg",
     link: "https://zak.tv/zapadoceska-galerie-v-plzni-otevrela-vystavu-umeni-jez-obklopovalo-franze-kafku",
   },
   {
