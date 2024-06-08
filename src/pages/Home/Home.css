@@ -100,6 +100,13 @@
     }
 }
 
+@media screen and (min-width: 900px) {
+    .custom-responsivity-order-first {
+        order: -999!important;
+    }
+    
+}
+
 .background-image-carousel {
     background-position: center;
     position: relative;
@@ -413,4 +420,24 @@ iframe {
 
 .text-shadow-md {
     text-shadow: black 0px 0px 5px;
+}
+.hover-svg-transition svg path {
+    transition: .5s transform, .3s fill, .3s stroke, .3s stroke-width;
+}
+
+.hover-svg-transition:hover svg path#_219400120 {
+    fill: hsl(309, 3%, 69%)!important;
+    stroke: hsl(309, 3%, 49%)!important;
+    stroke-width: 10px!important;
+    transform: scale(2.1) translateY(-37%) translateX(7%);
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.39));
+}
+
+.hover-svg-transition svg path:not(#_219400120) {
+    transition: .5s fill;
+
+}
+
+.hover-svg-transition:hover svg path:not(#_219400120) {
+    fill: hsl(309, 3%, 90%)!important;
 }

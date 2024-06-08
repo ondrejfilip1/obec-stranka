@@ -15,6 +15,16 @@ import insta_8 from "../../assets/galerie/insta_8.jpg";
 import insta_9 from "../../assets/galerie/insta_9.jpg";
 import insta_10 from "../../assets/galerie/insta_10.jpg";
 
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+
 export default function Galerie() {
   return (
     <>
@@ -256,6 +266,30 @@ export default function Galerie() {
           </div>
         </div>
       </div>
+      <Pagination className="inter-font mb-12">
+          <PaginationContent>
+            <PaginationItem>
+              <PaginationPrevious className="cursor-pointer" />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink className="cursor-pointer" isActive>1</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink className="cursor-pointer" >
+                2
+              </PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink className="cursor-pointer" >3</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationEllipsis />
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationNext className="cursor-pointer" />
+            </PaginationItem>
+          </PaginationContent>
+        </Pagination>
       <Footer></Footer>
     </>
   );
