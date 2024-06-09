@@ -454,7 +454,7 @@ iframe {
     padding: 1rem;
     border: 2px solid rgb(199, 199, 199);
     border-radius: 6px;
-    background-image: linear-gradient(#0b6e4fbf 0 0);
+    background-image: linear-gradient(#0B6E4F 0 0);
     background-size: 0% 100%;
     background-position: center center;
     background-repeat: no-repeat;
@@ -462,7 +462,7 @@ iframe {
   }
   
   .sex:hover {
-    border-color: #0b6e4fbf;
+    border-color: #0B6E4F;
     background-size: 100% 100%;
     background-position: center center; 
     color: white;
