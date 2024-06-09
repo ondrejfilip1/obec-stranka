@@ -1,0 +1,9 @@
+:root {
+    --full-bleed-color: #00000010;
+}
+
+.full-bleed {
+    box-shadow: 0 0 0 100vmax var(--full-bleed-color);
+    clip-path: inset(0 -100vmax);
+    background-color: var(--full-bleed-color);
+}

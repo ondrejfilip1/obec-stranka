@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { cn } from "@/utils/cn";
 import { BentoGrid, BentoGridItem } from "../../components/ui/bento-grid";
 import { IconCalendarEvent } from "@tabler/icons-react";
@@ -32,6 +32,9 @@ import { Eye } from "lucide-react";
 
 
 export default function Aktuality() {
+  useEffect(() => {
+    document.title = 'Plzeňský kraj - Aktuality';
+  }, []);
   return (
     <>
       <div className="header-placeholder" />

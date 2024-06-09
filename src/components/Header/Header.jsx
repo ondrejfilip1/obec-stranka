@@ -101,11 +101,11 @@ export default function Header({ scrollEffect }) {
                   open={Boolean(anchorEl) && menuIndex === 1}
                   onClose={handleMenuClose}
                 >
-                  <Link to={"/novinky"}>
-                  <MenuItem onClick={handleMenuClose}>Novinky</MenuItem>
+                  <Link to={"/rada"}>
+                    <MenuItem onClick={handleMenuClose}>Rada</MenuItem>
                   </Link>
-                  <Link to={"/akce"}>
-                  <MenuItem onClick={handleMenuClose}>Akce</MenuItem>
+                  <Link to={"/mapa"}>
+                    <MenuItem onClick={handleMenuClose}>Mapa</MenuItem>
                   </Link>
                   <Link to={"/galerie"}>
                     {" "}
@@ -113,9 +113,9 @@ export default function Header({ scrollEffect }) {
                   </Link>
                 </Menu>
                 <Link to={"/kultura"}>
-                <Button color="inherit" className="header-button">
-                  Kultura
-                </Button>
+                  <Button color="inherit" className="header-button">
+                    Kultura
+                  </Button>
                 </Link>
                 <Link to={"/kontakty"}>
                   <Button color="inherit" className="header-button">
@@ -182,15 +182,15 @@ export default function Header({ scrollEffect }) {
                   }`}
                 >
                   <div>
-                  <Link to={"/novinky"}>
-                    <Button color="transparent" variant="contained">
-                      Novinky
-                    </Button>
+                    <Link to={"/rada"}>
+                      <Button color="transparent" variant="contained">
+                        Rada
+                      </Button>
                     </Link>
-                    <Link to={"/akce"}>
-                    <Button color="transparent" variant="contained">
-                      Akce
-                    </Button>
+                    <Link to={"/mapa"}>
+                      <Button color="transparent" variant="contained">
+                        Mapa
+                      </Button>
                     </Link>
                     <Link to={"/galerie"}>
                       <Button color="transparent" variant="contained">
@@ -200,9 +200,9 @@ export default function Header({ scrollEffect }) {
                   </div>
                 </div>
                 <Link to={"/kultura"}>
-                <Button color="transparent" variant="contained">
-                  Kultura
-                </Button>
+                  <Button color="transparent" variant="contained">
+                    Kultura
+                  </Button>
                 </Link>
                 <Link to={"/kontakty"}>
                   <Button color="transparent" variant="contained">

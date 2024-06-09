@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./../../App.css";
 import "@fontsource/inter";
 import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
@@ -23,6 +23,9 @@ import { themeInter } from "@/App";
 import "./Kultura.css";
 
 export default function Kultura() {
+  useEffect(() => {
+    document.title = 'Plzeňský kraj - Kultura';
+  }, []);
   return (
     <>
       <ThemeProvider theme={themeInter}>

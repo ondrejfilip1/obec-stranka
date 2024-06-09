@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 
 import "./../../App.css";
 
@@ -86,6 +86,9 @@ const rows = [
 ];
 
 export default function Kontakty() {
+  useEffect(() => {
+    document.title = 'Plzeňský kraj - Kontakty';
+  }, []);
   return (
     <>
       <Header scrollEffect="off"></Header>

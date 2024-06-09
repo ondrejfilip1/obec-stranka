@@ -11,6 +11,7 @@ import Kontakty from "./pages/Kontakty/Kontakty";
 import Aktuality from "./pages/Aktuality/Aktuality";
 import Kultura from "./pages/Kultura/Kultura";
 import Mapa from "./pages/Mapa/Mapa"
+import Rada from "./pages/Rada/Rada";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
               <Route path="/kultura" element={<Kultura />} />
               <Route path="/aktuality" element={<Aktuality />} />
               <Route path="/mapa" element={<Mapa />} />
+              <Route path="/rada" element={<Rada />} />
             </Routes>
           </div>
         </>
