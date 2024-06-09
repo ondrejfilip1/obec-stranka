@@ -33,10 +33,6 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import InfoIcon from "@mui/icons-material/Info";
 
 export default function Home() {
-  useEffect(() => {
-    document.title = 'Plzeňský kraj';
-  }, []);
-
   const [api, setApi] = useState(null);
   const [current, setCurrent] = useState(0);
   const [mapSrc, setMapSrc] = useState("https://frame.mapy.cz/s/gagefusono");
@@ -420,21 +416,20 @@ export default function Home() {
                       <div className="rating-number">4.6</div>
                     </div>
                     <ThemeProvider theme={theme}>
-                      {" "}
-                      <Link
-                        to={
-                          "https://mapy.cz/zakladni?source=base&id=2260430&x=13.1965349&y=49.6419734&z=17"
-                        }
+                      <Button
+                        variant="contained"
+                        className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
+                        color="transparent"
                       >
-                        <Button
-                          variant="contained"
-                          className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
-                          color="transparent"
+                        <Link
+                          to={
+                            "https://mapy.cz/zakladni?source=base&id=2260430&x=13.1965349&y=49.6419734&z=17"
+                          }
                         >
                           Navštívit
                           <ArrowOutwardIcon className="pl-1"></ArrowOutwardIcon>
-                        </Button>
-                      </Link>
+                        </Link>
+                      </Button>
                     </ThemeProvider>
                   </CardContent>
                 </Card>
@@ -466,21 +461,20 @@ export default function Home() {
                       <div className="rating-number">4.7</div>
                     </div>
                     <ThemeProvider theme={theme}>
-                      {" "}
-                      <Link
-                        to={
-                          "https://cs.wikipedia.org/wiki/Katedr%C3%A1la_svat%C3%A9ho_Bartolom%C4%9Bje"
-                        }
+                      <Button
+                        variant="contained"
+                        className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
+                        color="transparent"
                       >
-                        <Button
-                          variant="contained"
-                          className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
-                          color="transparent"
+                        <Link
+                          to={
+                            "https://cs.wikipedia.org/wiki/Katedr%C3%A1la_svat%C3%A9ho_Bartolom%C4%9Bje"
+                          }
                         >
                           Navštívit
                           <ArrowOutwardIcon className="pl-1"></ArrowOutwardIcon>
-                        </Button>
-                      </Link>
+                        </Link>
+                      </Button>
                     </ThemeProvider>
                   </CardContent>
                 </Card>
@@ -510,17 +504,16 @@ export default function Home() {
                       <div className="rating-number">4.7</div>
                     </div>
                     <ThemeProvider theme={theme}>
-                      {" "}
-                      <Link to={"https://zamek-manetin.cz/cs"}>
-                        <Button
-                          variant="contained"
-                          className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
-                          color="transparent"
-                        >
+                      <Button
+                        variant="contained"
+                        className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
+                        color="transparent"
+                      >
+                        <Link to={"https://zamek-manetin.cz/cs"}>
                           Navštívit
                           <ArrowOutwardIcon className="pl-1"></ArrowOutwardIcon>
-                        </Button>
-                      </Link>
+                        </Link>
+                      </Button>
                     </ThemeProvider>
                   </CardContent>
                 </Card>
@@ -550,21 +543,20 @@ export default function Home() {
                       <div className="rating-number">4.6</div>
                     </div>
                     <ThemeProvider theme={theme}>
-                      {" "}
-                      <Link
-                        to={
-                          "https://www.kudyznudy.cz/aktivity/nove-divadlo-josefa-kajetana-tyla-v-plzni"
-                        }
+                      <Button
+                        variant="contained"
+                        className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
+                        color="transparent"
                       >
-                        <Button
-                          variant="contained"
-                          className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
-                          color="transparent"
+                        <Link
+                          to={
+                            "https://www.kudyznudy.cz/aktivity/nove-divadlo-josefa-kajetana-tyla-v-plzni"
+                          }
                         >
                           Navštívit
                           <ArrowOutwardIcon className="pl-1"></ArrowOutwardIcon>
-                        </Button>
-                      </Link>
+                        </Link>
+                      </Button>
                     </ThemeProvider>
                   </CardContent>
                 </Card>
@@ -595,20 +587,20 @@ export default function Home() {
                       <div className="rating-number">4,2</div>
                     </div>
                     <ThemeProvider theme={theme}>
-                      <Link
-                        to={
-                          "https://www.kudyznudy.cz/aktivity/zamek-zbiroh-vychutnejte-si-zamecke-prostredi-pr"
-                        }
+                      <Button
+                        variant="contained"
+                        className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
+                        color="transparent"
                       >
-                        <Button
-                          variant="contained"
-                          className="textik !mb-20 w-fit backdrop-blur-sm !bg-white/25"
-                          color="transparent"
+                        <Link
+                          to={
+                            "https://www.kudyznudy.cz/aktivity/zamek-zbiroh-vychutnejte-si-zamecke-prostredi-pr"
+                          }
                         >
                           Navštívit
                           <ArrowOutwardIcon className="pl-1"></ArrowOutwardIcon>
-                        </Button>
-                      </Link>
+                        </Link>
+                      </Button>
                     </ThemeProvider>
                   </CardContent>
                 </Card>
@@ -631,6 +623,42 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <div>
+        <h2 className="text-4xl dark:text-white mb-10 mt-20 text-center">
+          Úřední hodiny krajského úřadu
+        </h2>
+        <div className="flex-wrap dark:text-white mb-10 text-center flex justify-center gap-10 mx-10 ">
+          <div className="text-2xl sex">
+            <div>
+              <p>Pondělí, Středa</p>
+              <p>8:00 - 17:00</p>
+            </div>
+          </div>
+          <div className="text-2xl sex">
+            <div>
+              <p>Úterý, Čtvrtek</p>
+              <p>8:00 - 15:00</p>
+            </div>
+          </div>
+          <div className="sex">
+            <div>
+              <div className="text-2xl !mb-3">
+                <p>Pátek</p>
+                8:00 - 13:00
+              </div>
+              <p>
+                <span className="!text-1xl inter-font">
+                  &#40;kromě odboru dopravy a silničního hospodářství - agendy
+                  SILNIČNÍ DOPRAVY; odboru vnitřních věcí a krajský živnostenský
+                  úřad - agendy MATRIKY a agendy STÁTNÍHO OBČANSTVÍ&#41;
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <Footer></Footer>
     </>
   );
