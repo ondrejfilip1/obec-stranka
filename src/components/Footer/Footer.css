@@ -33,14 +33,18 @@ footer {
 
     .Footer-Email{
         width: 223px;
+        border-top-right-radius: 4px !important;
     }
     
 
-    footer input {
-        border-bottom-left-radius: 0 !important;
-        border-top-left-radius: 4px !important;
+
+}
+
+@media screen and (max-width: 1455px) {
+    .Footer-Email .MuiInputBase-root {
         border-top-right-radius: 4px !important;
-    }
+        border-bottom-left-radius: 0px !important;
+      }
 }
 
 @media screen and (max-width: 767px) {
