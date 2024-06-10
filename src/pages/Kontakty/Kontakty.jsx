@@ -76,7 +76,7 @@ const rows = [
     "referent na úseku památkové péče"
   ),
   createData("Šárka Batková M.Ec.", "+420 377 195 037", "OKHE", "asistent"),
-  createData("Mgr. Martin Baxa", "", "", "zastupitel"),
+  createData("Ing. Jitka Bednářová", "+420 377 195 219", "OKHE", "vedoucí odboru kancelář hejtmana"),
   createData(
     "Mgr. Václav Baxa",
     "+420 377 195 406",

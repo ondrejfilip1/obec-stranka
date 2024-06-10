@@ -120,7 +120,7 @@ export default function Footer() {
                 <Link to={"/informace"}>Důležité Informace</Link>
               </div>
               <div className="mb-1">
-                <Link to={"/poplatky"}>Poplatky</Link>
+                <Link to={"/kontakty"}>Kontakty</Link>
               </div>
               <div className="mb-1">
                 <Link to={"/dokumenty"}>Dokumenty</Link>
@@ -129,7 +129,7 @@ export default function Footer() {
                 <Link to={"/uzemi"}>Územní plán</Link>
               </div>
               <div>
-                <Link to={"/rozpocet"}>Rozpočet</Link>
+                <Link to={"/mapa"}>Mapa</Link>
               </div>
             </div>
 
@@ -147,7 +147,7 @@ export default function Footer() {
                 <Link to={"/kultura"}>Kultura</Link>
               </div>
               <div>
-                <Link to={"/krizovyportal"}>Krizový portál</Link>
+                <Link to={"/rada"}>Rada</Link>
               </div>
             </div>
             <div>
