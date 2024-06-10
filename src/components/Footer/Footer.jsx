@@ -1,22 +1,10 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Container from "@mui/material/Container";
-import IconButton from "@mui/material/IconButton";
-import InputLabel from "@mui/material/InputLabel";
 import { Link } from "react-router-dom";
-import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
-import App from "@/App";
-
-import { visuallyHidden } from "@mui/utils";
-
-import FacebookIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/X";
 import "./Footer.css";
 import { Grid } from "@mui/material";
+import AdminPanel from "../AdminPanel/AdminPanel";
 
 export default function Footer() {
   return (
@@ -120,7 +108,7 @@ export default function Footer() {
                 <Link to={"/informace"}>Důležité Informace</Link>
               </div>
               <div className="mb-1">
-                <Link to={"/poplatky"}>Poplatky</Link>
+                <Link to={"/kontakty"}>Kontakty</Link>
               </div>
               <div className="mb-1">
                 <Link to={"/dokumenty"}>Dokumenty</Link>
@@ -129,7 +117,7 @@ export default function Footer() {
                 <Link to={"/uzemi"}>Územní plán</Link>
               </div>
               <div>
-                <Link to={"/rozpocet"}>Rozpočet</Link>
+                <Link to={"/mapa"}>Mapa</Link>
               </div>
             </div>
 
@@ -147,7 +135,7 @@ export default function Footer() {
                 <Link to={"/kultura"}>Kultura</Link>
               </div>
               <div>
-                <Link to={"/krizovyportal"}>Krizový portál</Link>
+                <Link to={"/rada"}>Rada</Link>
               </div>
             </div>
             <div>
@@ -189,6 +177,7 @@ export default function Footer() {
           </span>
           <span> & </span>
           <a href="https://github.com/Hurmex">Tomáš Tran</a>
+          <AdminPanel />
         </div>
       </footer>
     </>

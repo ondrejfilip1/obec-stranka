@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "@/utils/cn";
 import { BentoGrid, BentoGridItem } from "../../components/ui/bento-grid";
 import { IconCalendarEvent } from "@tabler/icons-react";
@@ -16,9 +16,17 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 
-import { Button } from "@/components/ui/button";
+import { format } from "date-fns";
+import { Calendar as CalendarIcon } from "lucide-react";
 
-import VisibilityIcon from '@mui/icons-material/Visibility';
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import img1 from "../../assets/aktuality/vystava-ocima-franze-kafky_L.jpg";
@@ -28,13 +36,13 @@ import img4 from "../../assets/aktuality/230531_rallye_1_pech_l_L.jpg";
 import img5 from "../../assets/aktuality/viewimage-22_6618e65a7f800_L.jpg";
 import img6 from "../../assets/aktuality/velbloud-dvouhrby-camelus-ferus-bactrianus-8-4-2024-km-11-upr-mini-1_L.jpg";
 import img7 from "../../assets/aktuality/penize_66601acc9998c_L.jpg";
-import { Eye } from "lucide-react";
-
+import "./Aktuality.css";
 
 export default function Aktuality() {
   useEffect(() => {
-    document.title = 'Plzeňský kraj - Aktuality';
+    document.title = "Plzeňský kraj - Aktuality";
   }, []);
+  const [date, setDate] = useState(null);
   return (
     <>
       <div className="header-placeholder" />
@@ -64,10 +72,32 @@ export default function Aktuality() {
           />
         ))}
       </BentoGrid>
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4 flex justify-between">
         <Button className="inter-font mb-5" variant="ghost">
           Zobrazit vše
         </Button>
+        <Popover>
+          <PopoverTrigger asChild>
+            <Button
+              variant={"ghost"}
+              className={cn(
+                "w-fit justify-start text-left font-normal inter-font",
+                !date && "text-muted-foreground"
+              )}
+            >
+              <CalendarIcon className="mr-2 h-4 w-4" />
+              {date ? format(date, "PPP") : <span>Vyberte datum</span>}
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent className="w-auto p-0">
+            <Calendar
+              mode="single"
+              selected={date}
+              onSelect={setDate}
+              initialFocus
+            />
+          </PopoverContent>
+        </Popover>
       </div>
       <div className="flex justify-center align-center mb-10">
         <Pagination className="inter-font">
@@ -76,15 +106,15 @@ export default function Aktuality() {
               <PaginationPrevious className="cursor-pointer" />
             </PaginationItem>
             <PaginationItem>
-              <PaginationLink className="cursor-pointer" isActive>1</PaginationLink>
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink className="cursor-pointer" >
-                2
+              <PaginationLink className="cursor-pointer" isActive>
+                1
               </PaginationLink>
             </PaginationItem>
             <PaginationItem>
-              <PaginationLink className="cursor-pointer" >3</PaginationLink>
+              <PaginationLink className="cursor-pointer">2</PaginationLink>
+            </PaginationItem>
+            <PaginationItem>
+              <PaginationLink className="cursor-pointer">3</PaginationLink>
             </PaginationItem>
             <PaginationItem>
               <PaginationEllipsis />

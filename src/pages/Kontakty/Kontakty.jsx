@@ -76,7 +76,7 @@ const rows = [
     "referent na úseku památkové péče"
   ),
   createData("Šárka Batková M.Ec.", "+420 377 195 037", "OKHE", "asistent"),
-  createData("Mgr. Martin Baxa", "", "", "zastupitel"),
+  createData("Ing. Jitka Bednářová", "+420 377 195 219", "OKHE", "vedoucí odboru kancelář hejtmana"),
   createData(
     "Mgr. Václav Baxa",
     "+420 377 195 406",
@@ -91,54 +91,54 @@ export default function Kontakty() {
   }, []);
   return (
     <>
-      <Header scrollEffect="off"></Header>
-      <Container fixed className="open-sans my-10">
-        <div className="mx-6 mt-28  md:text-left">
-          <Typography
-            variant="h2"
-            gutterBottom
-            className="open-sans !flex !justify-between !items-center"
-          >
-            Kontakty
-            <PhoneEnabledIcon className="float-right !text-3xl"></PhoneEnabledIcon>
-          </Typography>
-          <div className="my-12 !inter-font	">
-            <div className="items-center flex justify-center">
-              <TableContainer component={Paper} className="!bg-neutral-100">
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell className="!font-bold">Jméno</TableCell>
-                      <TableCell className="!font-bold" align="right">Telefonní číslo</TableCell>
-                      <TableCell className="!font-bold" align="right">Oddělení</TableCell>
-                      <TableCell className="!font-bold" align="right">Pozice</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {rows.map((row) => (
-                      <TableRow
-                        key={row.info1}
-                        sx={{
-                          "&:last-child td, &:last-child th": { border: 0 },
-                        }}
-                      >
-                        <TableCell component="th" scope="row">
-                          {row.info1}
-                        </TableCell>
+    <Header scrollEffect="off"></Header>
+    <Container fixed className="open-sans my-10">
+      <div className="mx-6 mt-28  md:text-left">
+        <Typography
+          variant="h2"
+          gutterBottom
+          className="open-sans !flex !justify-between !items-center"
+        >
+          Kontakty
+          <PhoneEnabledIcon className="float-right !text-3xl"></PhoneEnabledIcon>
+        </Typography>
+        <div className="my-12 !inter-font	">
+          <div className="items-center flex justify-center">
+            <TableContainer component={Paper} className="!bg-neutral-100">
+              <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <TableHead>
+                  <TableRow>
+                    <TableCell className="!font-bold">Jméno</TableCell>
+                    <TableCell className="!font-bold" align="right">Telefonní číslo</TableCell>
+                    <TableCell className="!font-bold" align="right">Oddělení</TableCell>
+                    <TableCell className="!font-bold" align="right">Pozice</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {rows.map((row) => (
+                    <TableRow
+                      key={row.info1}
+                      sx={{
+                        "&:last-child td, &:last-child th": { border: 0 },
+                      }}
+                    >
+                      <TableCell component="th" scope="row">
+                        {row.info1}
+                      </TableCell>
 
-                        <TableCell align="right">{row.info2}</TableCell>
-                        <TableCell align="right">{row.info3}</TableCell>
-                        <TableCell align="right">{row.info4}</TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </div>
+                      <TableCell align="right">{row.info2}</TableCell>
+                      <TableCell align="right">{row.info3}</TableCell>
+                      <TableCell align="right">{row.info4}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
           </div>
         </div>
-      </Container>
-      <Footer></Footer>
-    </>
+      </div>
+    </Container>
+    <Footer></Footer>
+  </>
   );
 }
