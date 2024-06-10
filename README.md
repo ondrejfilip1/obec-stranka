@@ -4,7 +4,8 @@
 React + Vite<br>
 MaterialUI<br>
 Shadcn/ui<br>
-Tailwind CSS
+Tailwind CSS<br>
+a ostatní...
 
 ## Autoři
 

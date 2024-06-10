@@ -8,7 +8,7 @@ export default function RadaCard({ obrazek, jmeno, popisek, order }) {
         order === "right" ? "md:flex-row-reverse" : ""
       }`}
     >
-      <img src={obrazek} alt="image" className="w-52" />
+      <img src={obrazek} alt="image" className="w-52" draggable="false" />
       <div>
         <Typography variant="h4" gutterBottom className="open-sans !mb-6">
           {jmeno}
