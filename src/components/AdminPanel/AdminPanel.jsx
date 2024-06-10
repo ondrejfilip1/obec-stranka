@@ -54,7 +54,7 @@ export default function AdminPanel() {
             </DialogTitle>
             <br />
             <DialogDescription>
-              Níže uvedený přihlašovací dialog slouží pouze k přihlášení do
+              Tento přihlašovací dialog slouží pouze k přihlášení do
               administrace webových stránek Plzeňského kraje a pro přístup
               volených zástupců kraje k materiálům předložených na jednání
               jednotlivých orgánů kraje.
