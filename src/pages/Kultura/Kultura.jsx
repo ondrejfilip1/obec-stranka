@@ -1,10 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./../../App.css";
 import "@fontsource/inter";
 import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
 import { BentoGrid, BentoGridItem } from "../../components/ui/bento-grid";
 import { IconCalendarEvent } from "@tabler/icons-react";
 import { Typography } from "@mui/material";
+
+import { format } from "date-fns";
+import { Calendar as CalendarIcon } from "lucide-react";
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import "../Aktuality/Aktuality.css";
+import { cn } from "@/utils/cn";
 
 import {
   Pagination,
@@ -26,6 +37,7 @@ export default function Kultura() {
   useEffect(() => {
     document.title = 'Plzeňský kraj - Kultura';
   }, []);
+  const [date, setDate] = useState(null);
   return (
     <>
       <ThemeProvider theme={themeInter}>
@@ -58,10 +70,32 @@ export default function Kultura() {
         </BentoGrid>
 
 
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="max-w-5xl mx-auto px-4 flex justify-between">
           <Button className="inter-font mb-5" variant="ghost">
             Zobrazit vše
           </Button>
+          <Popover>
+          <PopoverTrigger asChild>
+            <Button
+              variant={"ghost"}
+              className={cn(
+                "w-fit justify-start text-left font-normal inter-font",
+                !date && "text-muted-foreground"
+              )}
+            >
+              <CalendarIcon className="mr-2 h-4 w-4" />
+              {date ? format(date, "PPP") : <span>Vyberte datum</span>}
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent className="w-auto p-0">
+            <Calendar
+              mode="single"
+              selected={date}
+              onSelect={setDate}
+              initialFocus
+            />
+          </PopoverContent>
+        </Popover>
         </div>
         <div className="flex justify-center align-center mb-10">
           <Pagination className="inter-font">
