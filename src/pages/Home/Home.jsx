@@ -68,6 +68,9 @@ export default function Home() {
         break;
     }
   }, [current]);
+    useEffect(() => {
+    document.title = 'Plzeňský kraj';
+  }, []);
   return (
     <>
       <Header scrollEffect="on"></Header>
