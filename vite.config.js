@@ -6,9 +6,15 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/obec-stranka/',
+  
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  server: {
+    headers: {
+      'Permissions-Policy': 'interest-cohort=()'
+    }
   },
 })
